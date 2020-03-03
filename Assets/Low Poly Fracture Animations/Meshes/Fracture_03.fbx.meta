@@ -1,0 +1,1379 @@
+fileFormatVersion: 2
+guid: 5b205bd9734467e4d81f3df70d1c0a3f
+timeCreated: 1521426281
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: Cube.001_key.001
+    100002: Cube.001_key.002
+    100004: Cube.001_key.003
+    100006: Cube.001_key.004
+    100008: Cube.001_key.005
+    100010: Cube.001_key.006
+    100012: Cube.001_key.007
+    100014: Cube.001_key.008
+    100016: Cube.001_key.009
+    100018: Cube.001_key.010
+    100020: Cube.001_key.011
+    100022: Cube.001_key.012
+    100024: Cube.001_key.013
+    100026: Cube.001_key.014
+    100028: Cube.001_key.015
+    100030: Cube.001_key.017
+    100032: Cube.001_key.019
+    100034: Cube.001_key.020
+    100036: Cube.001_key.021
+    100038: Cube.001_key.022
+    100040: Cube.001_key.023
+    100042: Cube.001_key.024
+    100044: Cube.001_key.025
+    100046: Cube.001_key.026
+    100048: Cube.001_key.027
+    100050: Cube.001_key.028
+    100052: Cube.001_key.029
+    100054: Cube.001_key.030
+    100056: Cube.001_key.031
+    100058: Cube.001_key.032
+    100060: Cube.001_key.033
+    100062: Cube.001_key.034
+    100064: Cube.001_key.035
+    100066: Cube.001_key.036
+    100068: Cube.001_key.037
+    100070: Cube.001_key.038
+    100072: Cube.001_key.039
+    100074: Cube.001_key.040
+    100076: Cube.001_key.041
+    100078: Cube.001_key.042
+    100080: Cube.001_key.043
+    100082: Cube.001_key.044
+    100084: Cube.001_key.045
+    100086: Cube.001_key.046
+    100088: Cube.001_key.047
+    100090: Cube.001_key.048
+    100092: Cube.001_key.049
+    100094: Cube.001_key.050
+    100096: Cube.001_key.051
+    100098: Cube.001_key.052
+    100100: Cube.001_key.053
+    100102: Cube.001_key.054
+    100104: Cube.001_key.055
+    100106: Cube.001_key.056
+    100108: Cube.001_key.057
+    100110: Cube.001_key.058
+    100112: Cube.001_key.059
+    100114: Cube.001_key.060
+    100116: Cube.001_key.061
+    100118: Cube.001_key.062
+    100120: Cube.001_key.063
+    100122: Cube.001_key.064
+    100124: Cube.001_key.065
+    100126: Cube.001_key.066
+    100128: Cube.001_key.067
+    100130: Cube.001_key.068
+    100132: Cube.001_key.069
+    100134: Cube.001_key.070
+    100136: Cube.001_key.071
+    100138: Cube.001_key.072
+    100140: Cube.001_key.073
+    100142: Cube.001_key.074
+    100144: Cube.001_key.075
+    100146: Cube.001_key.076
+    100148: Cube.001_key.077
+    100150: Cube.001_key.078
+    100152: Cube.001_key.079
+    100154: Cube.001_key.080
+    100156: Cube.001_key.081
+    100158: Cube.001_key.082
+    100160: Cube.001_key.083
+    100162: Cube.001_key.084
+    100164: Cube.001_key.085
+    100166: Cube.001_key.087
+    100168: Cube.001_key.090
+    100170: Cube.001_key.091
+    100172: Cube.001_key.092
+    100174: Cube.001_key.093
+    100176: Cube.001_key.095
+    100178: Cube.001_key.096
+    100180: Cube.001_key.097
+    100182: Cube.001_key.098
+    100184: Cube.001_key.099
+    100186: Cube.001_key.100
+    100188: Cube.001_key.101
+    100190: Cube.001_key.102
+    100192: Cube.001_key.103
+    100194: Cube.001_key.104
+    100196: Cube.001_key.105
+    100198: Cube.001_key.106
+    100200: Cube.001_key.107
+    100202: Cube.001_key.108
+    100204: Cube.001_key.109
+    100206: Cube.001_key.110
+    100208: Cube.001_key.111
+    100210: Cube.001_key.112
+    100212: Cube.001_key.113
+    100214: Cube.001_key.114
+    100216: Cube.001_key.115
+    100218: Cube.001_key.116
+    100220: Cube.001_key.117
+    100222: Cube.001_key.118
+    100224: Cube.001_key.119
+    100226: Cube.001_key.120
+    100228: Cube.001_key.121
+    100230: Cube.001_key.122
+    100232: Cube.001_key.123
+    100234: Cube.001_key.124
+    100236: Cube.001_key.125
+    100238: Cube.001_key.126
+    100240: Cube.001_key.127
+    100242: Cube.001_key.128
+    100244: Cube.001_key.129
+    100246: Cube.001_key.130
+    100248: Cube.001_key.131
+    100250: Cube.001_key.132
+    100252: Cube.001_key.133
+    100254: Cube.001_key.134
+    100256: Cube.001_key.135
+    100258: Cube.001_key.136
+    100260: Cube.001_key.137
+    100262: Cube.001_key.138
+    100264: Cube.001_key.139
+    100266: Cube.001_key.140
+    100268: Cube.001_key.141
+    100270: Cube.001_key.142
+    100272: Cube.001_key.143
+    100274: Cube.001_key.144
+    100276: Cube.001_key.145
+    100278: Cube.001_key.146
+    100280: Cube.001_key.147
+    100282: Cube.001_key.148
+    100284: Cube.001_key.149
+    100286: Cube.001_key.150
+    100288: Cube.001_key.151
+    100290: Cube.001_key.152
+    100292: Cube.001_key.153
+    100294: Cube.001_key.154
+    100296: Cube.001_key.155
+    100298: Cube.001_key.156
+    100300: Cube.001_key.157
+    100302: Cube.001_key.158
+    100304: Cube.001_key.159
+    100306: Cube.001_key.160
+    100308: Cube.001_key.161
+    100310: Cube.001_key.162
+    100312: Cube.001_key.163
+    100314: Cube.001_key.164
+    100316: Cube.001_key.165
+    100318: Cube.001_key.166
+    100320: Cube.001_key.167
+    100322: Cube.001_key.168
+    100324: Cube.001_key.170
+    100326: Cube.001_key.171
+    100328: Cube.001_key.173
+    100330: Cube.001_key.174
+    100332: Cube.001_key.175
+    100334: Cube.001_key.176
+    100336: Cube.001_key.177
+    100338: Cube.001_key.178
+    100340: Cube.001_key.179
+    100342: Cube.001_key.180
+    100344: Cube.001_key.181
+    100346: Cube.001_key.182
+    100348: Cube.001_key.183
+    100350: Cube.001_key.184
+    100352: Cube.001_key.185
+    100354: Cube.001_key.186
+    100356: Cube.001_key.187
+    100358: Cube.001_key.188
+    100360: Cube.001_key.189
+    100362: Cube.001_key.190
+    100364: //RootNode
+    400000: Cube.001_key.001
+    400002: Cube.001_key.002
+    400004: Cube.001_key.003
+    400006: Cube.001_key.004
+    400008: Cube.001_key.005
+    400010: Cube.001_key.006
+    400012: Cube.001_key.007
+    400014: Cube.001_key.008
+    400016: Cube.001_key.009
+    400018: Cube.001_key.010
+    400020: Cube.001_key.011
+    400022: Cube.001_key.012
+    400024: Cube.001_key.013
+    400026: Cube.001_key.014
+    400028: Cube.001_key.015
+    400030: Cube.001_key.017
+    400032: Cube.001_key.019
+    400034: Cube.001_key.020
+    400036: Cube.001_key.021
+    400038: Cube.001_key.022
+    400040: Cube.001_key.023
+    400042: Cube.001_key.024
+    400044: Cube.001_key.025
+    400046: Cube.001_key.026
+    400048: Cube.001_key.027
+    400050: Cube.001_key.028
+    400052: Cube.001_key.029
+    400054: Cube.001_key.030
+    400056: Cube.001_key.031
+    400058: Cube.001_key.032
+    400060: Cube.001_key.033
+    400062: Cube.001_key.034
+    400064: Cube.001_key.035
+    400066: Cube.001_key.036
+    400068: Cube.001_key.037
+    400070: Cube.001_key.038
+    400072: Cube.001_key.039
+    400074: Cube.001_key.040
+    400076: Cube.001_key.041
+    400078: Cube.001_key.042
+    400080: Cube.001_key.043
+    400082: Cube.001_key.044
+    400084: Cube.001_key.045
+    400086: Cube.001_key.046
+    400088: Cube.001_key.047
+    400090: Cube.001_key.048
+    400092: Cube.001_key.049
+    400094: Cube.001_key.050
+    400096: Cube.001_key.051
+    400098: Cube.001_key.052
+    400100: Cube.001_key.053
+    400102: Cube.001_key.054
+    400104: Cube.001_key.055
+    400106: Cube.001_key.056
+    400108: Cube.001_key.057
+    400110: Cube.001_key.058
+    400112: Cube.001_key.059
+    400114: Cube.001_key.060
+    400116: Cube.001_key.061
+    400118: Cube.001_key.062
+    400120: Cube.001_key.063
+    400122: Cube.001_key.064
+    400124: Cube.001_key.065
+    400126: Cube.001_key.066
+    400128: Cube.001_key.067
+    400130: Cube.001_key.068
+    400132: Cube.001_key.069
+    400134: Cube.001_key.070
+    400136: Cube.001_key.071
+    400138: Cube.001_key.072
+    400140: Cube.001_key.073
+    400142: Cube.001_key.074
+    400144: Cube.001_key.075
+    400146: Cube.001_key.076
+    400148: Cube.001_key.077
+    400150: Cube.001_key.078
+    400152: Cube.001_key.079
+    400154: Cube.001_key.080
+    400156: Cube.001_key.081
+    400158: Cube.001_key.082
+    400160: Cube.001_key.083
+    400162: Cube.001_key.084
+    400164: Cube.001_key.085
+    400166: Cube.001_key.087
+    400168: Cube.001_key.090
+    400170: Cube.001_key.091
+    400172: Cube.001_key.092
+    400174: Cube.001_key.093
+    400176: Cube.001_key.095
+    400178: Cube.001_key.096
+    400180: Cube.001_key.097
+    400182: Cube.001_key.098
+    400184: Cube.001_key.099
+    400186: Cube.001_key.100
+    400188: Cube.001_key.101
+    400190: Cube.001_key.102
+    400192: Cube.001_key.103
+    400194: Cube.001_key.104
+    400196: Cube.001_key.105
+    400198: Cube.001_key.106
+    400200: Cube.001_key.107
+    400202: Cube.001_key.108
+    400204: Cube.001_key.109
+    400206: Cube.001_key.110
+    400208: Cube.001_key.111
+    400210: Cube.001_key.112
+    400212: Cube.001_key.113
+    400214: Cube.001_key.114
+    400216: Cube.001_key.115
+    400218: Cube.001_key.116
+    400220: Cube.001_key.117
+    400222: Cube.001_key.118
+    400224: Cube.001_key.119
+    400226: Cube.001_key.120
+    400228: Cube.001_key.121
+    400230: Cube.001_key.122
+    400232: Cube.001_key.123
+    400234: Cube.001_key.124
+    400236: Cube.001_key.125
+    400238: Cube.001_key.126
+    400240: Cube.001_key.127
+    400242: Cube.001_key.128
+    400244: Cube.001_key.129
+    400246: Cube.001_key.130
+    400248: Cube.001_key.131
+    400250: Cube.001_key.132
+    400252: Cube.001_key.133
+    400254: Cube.001_key.134
+    400256: Cube.001_key.135
+    400258: Cube.001_key.136
+    400260: Cube.001_key.137
+    400262: Cube.001_key.138
+    400264: Cube.001_key.139
+    400266: Cube.001_key.140
+    400268: Cube.001_key.141
+    400270: Cube.001_key.142
+    400272: Cube.001_key.143
+    400274: Cube.001_key.144
+    400276: Cube.001_key.145
+    400278: Cube.001_key.146
+    400280: Cube.001_key.147
+    400282: Cube.001_key.148
+    400284: Cube.001_key.149
+    400286: Cube.001_key.150
+    400288: Cube.001_key.151
+    400290: Cube.001_key.152
+    400292: Cube.001_key.153
+    400294: Cube.001_key.154
+    400296: Cube.001_key.155
+    400298: Cube.001_key.156
+    400300: Cube.001_key.157
+    400302: Cube.001_key.158
+    400304: Cube.001_key.159
+    400306: Cube.001_key.160
+    400308: Cube.001_key.161
+    400310: Cube.001_key.162
+    400312: Cube.001_key.163
+    400314: Cube.001_key.164
+    400316: Cube.001_key.165
+    400318: Cube.001_key.166
+    400320: Cube.001_key.167
+    400322: Cube.001_key.168
+    400324: Cube.001_key.170
+    400326: Cube.001_key.171
+    400328: Cube.001_key.173
+    400330: Cube.001_key.174
+    400332: Cube.001_key.175
+    400334: Cube.001_key.176
+    400336: Cube.001_key.177
+    400338: Cube.001_key.178
+    400340: Cube.001_key.179
+    400342: Cube.001_key.180
+    400344: Cube.001_key.181
+    400346: Cube.001_key.182
+    400348: Cube.001_key.183
+    400350: Cube.001_key.184
+    400352: Cube.001_key.185
+    400354: Cube.001_key.186
+    400356: Cube.001_key.187
+    400358: Cube.001_key.188
+    400360: Cube.001_key.189
+    400362: Cube.001_key.190
+    400364: //RootNode
+    2300000: Cube.001_key.001
+    2300002: Cube.001_key.002
+    2300004: Cube.001_key.003
+    2300006: Cube.001_key.004
+    2300008: Cube.001_key.005
+    2300010: Cube.001_key.006
+    2300012: Cube.001_key.007
+    2300014: Cube.001_key.008
+    2300016: Cube.001_key.009
+    2300018: Cube.001_key.010
+    2300020: Cube.001_key.011
+    2300022: Cube.001_key.012
+    2300024: Cube.001_key.013
+    2300026: Cube.001_key.014
+    2300028: Cube.001_key.015
+    2300030: Cube.001_key.017
+    2300032: Cube.001_key.019
+    2300034: Cube.001_key.020
+    2300036: Cube.001_key.021
+    2300038: Cube.001_key.022
+    2300040: Cube.001_key.023
+    2300042: Cube.001_key.024
+    2300044: Cube.001_key.025
+    2300046: Cube.001_key.026
+    2300048: Cube.001_key.027
+    2300050: Cube.001_key.028
+    2300052: Cube.001_key.029
+    2300054: Cube.001_key.030
+    2300056: Cube.001_key.031
+    2300058: Cube.001_key.032
+    2300060: Cube.001_key.033
+    2300062: Cube.001_key.034
+    2300064: Cube.001_key.035
+    2300066: Cube.001_key.036
+    2300068: Cube.001_key.037
+    2300070: Cube.001_key.038
+    2300072: Cube.001_key.039
+    2300074: Cube.001_key.040
+    2300076: Cube.001_key.041
+    2300078: Cube.001_key.042
+    2300080: Cube.001_key.043
+    2300082: Cube.001_key.044
+    2300084: Cube.001_key.045
+    2300086: Cube.001_key.046
+    2300088: Cube.001_key.047
+    2300090: Cube.001_key.048
+    2300092: Cube.001_key.049
+    2300094: Cube.001_key.050
+    2300096: Cube.001_key.051
+    2300098: Cube.001_key.052
+    2300100: Cube.001_key.053
+    2300102: Cube.001_key.054
+    2300104: Cube.001_key.055
+    2300106: Cube.001_key.056
+    2300108: Cube.001_key.057
+    2300110: Cube.001_key.058
+    2300112: Cube.001_key.059
+    2300114: Cube.001_key.060
+    2300116: Cube.001_key.061
+    2300118: Cube.001_key.062
+    2300120: Cube.001_key.063
+    2300122: Cube.001_key.064
+    2300124: Cube.001_key.065
+    2300126: Cube.001_key.066
+    2300128: Cube.001_key.067
+    2300130: Cube.001_key.068
+    2300132: Cube.001_key.069
+    2300134: Cube.001_key.070
+    2300136: Cube.001_key.071
+    2300138: Cube.001_key.072
+    2300140: Cube.001_key.073
+    2300142: Cube.001_key.074
+    2300144: Cube.001_key.075
+    2300146: Cube.001_key.076
+    2300148: Cube.001_key.077
+    2300150: Cube.001_key.078
+    2300152: Cube.001_key.079
+    2300154: Cube.001_key.080
+    2300156: Cube.001_key.081
+    2300158: Cube.001_key.082
+    2300160: Cube.001_key.083
+    2300162: Cube.001_key.084
+    2300164: Cube.001_key.085
+    2300166: Cube.001_key.087
+    2300168: Cube.001_key.090
+    2300170: Cube.001_key.091
+    2300172: Cube.001_key.092
+    2300174: Cube.001_key.093
+    2300176: Cube.001_key.095
+    2300178: Cube.001_key.096
+    2300180: Cube.001_key.097
+    2300182: Cube.001_key.098
+    2300184: Cube.001_key.099
+    2300186: Cube.001_key.100
+    2300188: Cube.001_key.101
+    2300190: Cube.001_key.102
+    2300192: Cube.001_key.103
+    2300194: Cube.001_key.104
+    2300196: Cube.001_key.105
+    2300198: Cube.001_key.106
+    2300200: Cube.001_key.107
+    2300202: Cube.001_key.108
+    2300204: Cube.001_key.109
+    2300206: Cube.001_key.110
+    2300208: Cube.001_key.111
+    2300210: Cube.001_key.112
+    2300212: Cube.001_key.113
+    2300214: Cube.001_key.114
+    2300216: Cube.001_key.115
+    2300218: Cube.001_key.116
+    2300220: Cube.001_key.117
+    2300222: Cube.001_key.118
+    2300224: Cube.001_key.119
+    2300226: Cube.001_key.120
+    2300228: Cube.001_key.121
+    2300230: Cube.001_key.122
+    2300232: Cube.001_key.123
+    2300234: Cube.001_key.124
+    2300236: Cube.001_key.125
+    2300238: Cube.001_key.126
+    2300240: Cube.001_key.127
+    2300242: Cube.001_key.128
+    2300244: Cube.001_key.129
+    2300246: Cube.001_key.130
+    2300248: Cube.001_key.131
+    2300250: Cube.001_key.132
+    2300252: Cube.001_key.133
+    2300254: Cube.001_key.134
+    2300256: Cube.001_key.135
+    2300258: Cube.001_key.136
+    2300260: Cube.001_key.137
+    2300262: Cube.001_key.138
+    2300264: Cube.001_key.139
+    2300266: Cube.001_key.140
+    2300268: Cube.001_key.141
+    2300270: Cube.001_key.142
+    2300272: Cube.001_key.143
+    2300274: Cube.001_key.144
+    2300276: Cube.001_key.145
+    2300278: Cube.001_key.146
+    2300280: Cube.001_key.147
+    2300282: Cube.001_key.148
+    2300284: Cube.001_key.149
+    2300286: Cube.001_key.150
+    2300288: Cube.001_key.151
+    2300290: Cube.001_key.152
+    2300292: Cube.001_key.153
+    2300294: Cube.001_key.154
+    2300296: Cube.001_key.155
+    2300298: Cube.001_key.156
+    2300300: Cube.001_key.157
+    2300302: Cube.001_key.158
+    2300304: Cube.001_key.159
+    2300306: Cube.001_key.160
+    2300308: Cube.001_key.161
+    2300310: Cube.001_key.162
+    2300312: Cube.001_key.163
+    2300314: Cube.001_key.164
+    2300316: Cube.001_key.165
+    2300318: Cube.001_key.166
+    2300320: Cube.001_key.167
+    2300322: Cube.001_key.168
+    2300324: Cube.001_key.170
+    2300326: Cube.001_key.171
+    2300328: Cube.001_key.173
+    2300330: Cube.001_key.174
+    2300332: Cube.001_key.175
+    2300334: Cube.001_key.176
+    2300336: Cube.001_key.177
+    2300338: Cube.001_key.178
+    2300340: Cube.001_key.179
+    2300342: Cube.001_key.180
+    2300344: Cube.001_key.181
+    2300346: Cube.001_key.182
+    2300348: Cube.001_key.183
+    2300350: Cube.001_key.184
+    2300352: Cube.001_key.185
+    2300354: Cube.001_key.186
+    2300356: Cube.001_key.187
+    2300358: Cube.001_key.188
+    2300360: Cube.001_key.189
+    2300362: Cube.001_key.190
+    3300000: Cube.001_key.001
+    3300002: Cube.001_key.002
+    3300004: Cube.001_key.003
+    3300006: Cube.001_key.004
+    3300008: Cube.001_key.005
+    3300010: Cube.001_key.006
+    3300012: Cube.001_key.007
+    3300014: Cube.001_key.008
+    3300016: Cube.001_key.009
+    3300018: Cube.001_key.010
+    3300020: Cube.001_key.011
+    3300022: Cube.001_key.012
+    3300024: Cube.001_key.013
+    3300026: Cube.001_key.014
+    3300028: Cube.001_key.015
+    3300030: Cube.001_key.017
+    3300032: Cube.001_key.019
+    3300034: Cube.001_key.020
+    3300036: Cube.001_key.021
+    3300038: Cube.001_key.022
+    3300040: Cube.001_key.023
+    3300042: Cube.001_key.024
+    3300044: Cube.001_key.025
+    3300046: Cube.001_key.026
+    3300048: Cube.001_key.027
+    3300050: Cube.001_key.028
+    3300052: Cube.001_key.029
+    3300054: Cube.001_key.030
+    3300056: Cube.001_key.031
+    3300058: Cube.001_key.032
+    3300060: Cube.001_key.033
+    3300062: Cube.001_key.034
+    3300064: Cube.001_key.035
+    3300066: Cube.001_key.036
+    3300068: Cube.001_key.037
+    3300070: Cube.001_key.038
+    3300072: Cube.001_key.039
+    3300074: Cube.001_key.040
+    3300076: Cube.001_key.041
+    3300078: Cube.001_key.042
+    3300080: Cube.001_key.043
+    3300082: Cube.001_key.044
+    3300084: Cube.001_key.045
+    3300086: Cube.001_key.046
+    3300088: Cube.001_key.047
+    3300090: Cube.001_key.048
+    3300092: Cube.001_key.049
+    3300094: Cube.001_key.050
+    3300096: Cube.001_key.051
+    3300098: Cube.001_key.052
+    3300100: Cube.001_key.053
+    3300102: Cube.001_key.054
+    3300104: Cube.001_key.055
+    3300106: Cube.001_key.056
+    3300108: Cube.001_key.057
+    3300110: Cube.001_key.058
+    3300112: Cube.001_key.059
+    3300114: Cube.001_key.060
+    3300116: Cube.001_key.061
+    3300118: Cube.001_key.062
+    3300120: Cube.001_key.063
+    3300122: Cube.001_key.064
+    3300124: Cube.001_key.065
+    3300126: Cube.001_key.066
+    3300128: Cube.001_key.067
+    3300130: Cube.001_key.068
+    3300132: Cube.001_key.069
+    3300134: Cube.001_key.070
+    3300136: Cube.001_key.071
+    3300138: Cube.001_key.072
+    3300140: Cube.001_key.073
+    3300142: Cube.001_key.074
+    3300144: Cube.001_key.075
+    3300146: Cube.001_key.076
+    3300148: Cube.001_key.077
+    3300150: Cube.001_key.078
+    3300152: Cube.001_key.079
+    3300154: Cube.001_key.080
+    3300156: Cube.001_key.081
+    3300158: Cube.001_key.082
+    3300160: Cube.001_key.083
+    3300162: Cube.001_key.084
+    3300164: Cube.001_key.085
+    3300166: Cube.001_key.087
+    3300168: Cube.001_key.090
+    3300170: Cube.001_key.091
+    3300172: Cube.001_key.092
+    3300174: Cube.001_key.093
+    3300176: Cube.001_key.095
+    3300178: Cube.001_key.096
+    3300180: Cube.001_key.097
+    3300182: Cube.001_key.098
+    3300184: Cube.001_key.099
+    3300186: Cube.001_key.100
+    3300188: Cube.001_key.101
+    3300190: Cube.001_key.102
+    3300192: Cube.001_key.103
+    3300194: Cube.001_key.104
+    3300196: Cube.001_key.105
+    3300198: Cube.001_key.106
+    3300200: Cube.001_key.107
+    3300202: Cube.001_key.108
+    3300204: Cube.001_key.109
+    3300206: Cube.001_key.110
+    3300208: Cube.001_key.111
+    3300210: Cube.001_key.112
+    3300212: Cube.001_key.113
+    3300214: Cube.001_key.114
+    3300216: Cube.001_key.115
+    3300218: Cube.001_key.116
+    3300220: Cube.001_key.117
+    3300222: Cube.001_key.118
+    3300224: Cube.001_key.119
+    3300226: Cube.001_key.120
+    3300228: Cube.001_key.121
+    3300230: Cube.001_key.122
+    3300232: Cube.001_key.123
+    3300234: Cube.001_key.124
+    3300236: Cube.001_key.125
+    3300238: Cube.001_key.126
+    3300240: Cube.001_key.127
+    3300242: Cube.001_key.128
+    3300244: Cube.001_key.129
+    3300246: Cube.001_key.130
+    3300248: Cube.001_key.131
+    3300250: Cube.001_key.132
+    3300252: Cube.001_key.133
+    3300254: Cube.001_key.134
+    3300256: Cube.001_key.135
+    3300258: Cube.001_key.136
+    3300260: Cube.001_key.137
+    3300262: Cube.001_key.138
+    3300264: Cube.001_key.139
+    3300266: Cube.001_key.140
+    3300268: Cube.001_key.141
+    3300270: Cube.001_key.142
+    3300272: Cube.001_key.143
+    3300274: Cube.001_key.144
+    3300276: Cube.001_key.145
+    3300278: Cube.001_key.146
+    3300280: Cube.001_key.147
+    3300282: Cube.001_key.148
+    3300284: Cube.001_key.149
+    3300286: Cube.001_key.150
+    3300288: Cube.001_key.151
+    3300290: Cube.001_key.152
+    3300292: Cube.001_key.153
+    3300294: Cube.001_key.154
+    3300296: Cube.001_key.155
+    3300298: Cube.001_key.156
+    3300300: Cube.001_key.157
+    3300302: Cube.001_key.158
+    3300304: Cube.001_key.159
+    3300306: Cube.001_key.160
+    3300308: Cube.001_key.161
+    3300310: Cube.001_key.162
+    3300312: Cube.001_key.163
+    3300314: Cube.001_key.164
+    3300316: Cube.001_key.165
+    3300318: Cube.001_key.166
+    3300320: Cube.001_key.167
+    3300322: Cube.001_key.168
+    3300324: Cube.001_key.170
+    3300326: Cube.001_key.171
+    3300328: Cube.001_key.173
+    3300330: Cube.001_key.174
+    3300332: Cube.001_key.175
+    3300334: Cube.001_key.176
+    3300336: Cube.001_key.177
+    3300338: Cube.001_key.178
+    3300340: Cube.001_key.179
+    3300342: Cube.001_key.180
+    3300344: Cube.001_key.181
+    3300346: Cube.001_key.182
+    3300348: Cube.001_key.183
+    3300350: Cube.001_key.184
+    3300352: Cube.001_key.185
+    3300354: Cube.001_key.186
+    3300356: Cube.001_key.187
+    3300358: Cube.001_key.188
+    3300360: Cube.001_key.189
+    3300362: Cube.001_key.190
+    4300000: Cube.001_key.190
+    4300002: Cube.001_key.189
+    4300004: Cube.001_key.188
+    4300006: Cube.001_key.187
+    4300008: Cube.001_key.186
+    4300010: Cube.001_key.185
+    4300012: Cube.001_key.184
+    4300014: Cube.001_key.183
+    4300016: Cube.001_key.182
+    4300018: Cube.001_key.181
+    4300020: Cube.001_key.180
+    4300022: Cube.001_key.179
+    4300024: Cube.001_key.178
+    4300026: Cube.001_key.177
+    4300028: Cube.001_key.176
+    4300030: Cube.001_key.175
+    4300032: Cube.001_key.174
+    4300034: Cube.001_key.173
+    4300036: Cube.001_key.171
+    4300038: Cube.001_key.170
+    4300040: Cube.001_key.168
+    4300042: Cube.001_key.167
+    4300044: Cube.001_key.166
+    4300046: Cube.001_key.165
+    4300048: Cube.001_key.164
+    4300050: Cube.001_key.163
+    4300052: Cube.001_key.162
+    4300054: Cube.001_key.161
+    4300056: Cube.001_key.160
+    4300058: Cube.001_key.159
+    4300060: Cube.001_key.158
+    4300062: Cube.001_key.157
+    4300064: Cube.001_key.156
+    4300066: Cube.001_key.155
+    4300068: Cube.001_key.154
+    4300070: Cube.001_key.153
+    4300072: Cube.001_key.152
+    4300074: Cube.001_key.151
+    4300076: Cube.001_key.150
+    4300078: Cube.001_key.149
+    4300080: Cube.001_key.148
+    4300082: Cube.001_key.147
+    4300084: Cube.001_key.146
+    4300086: Cube.001_key.145
+    4300088: Cube.001_key.144
+    4300090: Cube.001_key.143
+    4300092: Cube.001_key.142
+    4300094: Cube.001_key.141
+    4300096: Cube.001_key.140
+    4300098: Cube.001_key.139
+    4300100: Cube.001_key.138
+    4300102: Cube.001_key.137
+    4300104: Cube.001_key.136
+    4300106: Cube.001_key.135
+    4300108: Cube.001_key.134
+    4300110: Cube.001_key.133
+    4300112: Cube.001_key.132
+    4300114: Cube.001_key.131
+    4300116: Cube.001_key.130
+    4300118: Cube.001_key.129
+    4300120: Cube.001_key.128
+    4300122: Cube.001_key.127
+    4300124: Cube.001_key.126
+    4300126: Cube.001_key.125
+    4300128: Cube.001_key.124
+    4300130: Cube.001_key.123
+    4300132: Cube.001_key.122
+    4300134: Cube.001_key.121
+    4300136: Cube.001_key.120
+    4300138: Cube.001_key.119
+    4300140: Cube.001_key.118
+    4300142: Cube.001_key.117
+    4300144: Cube.001_key.116
+    4300146: Cube.001_key.115
+    4300148: Cube.001_key.114
+    4300150: Cube.001_key.113
+    4300152: Cube.001_key.112
+    4300154: Cube.001_key.111
+    4300156: Cube.001_key.110
+    4300158: Cube.001_key.109
+    4300160: Cube.001_key.108
+    4300162: Cube.001_key.107
+    4300164: Cube.001_key.106
+    4300166: Cube.001_key.105
+    4300168: Cube.001_key.104
+    4300170: Cube.001_key.103
+    4300172: Cube.001_key.102
+    4300174: Cube.001_key.101
+    4300176: Cube.001_key.100
+    4300178: Cube.001_key.099
+    4300180: Cube.001_key.098
+    4300182: Cube.001_key.097
+    4300184: Cube.001_key.096
+    4300186: Cube.001_key.095
+    4300188: Cube.001_key.093
+    4300190: Cube.001_key.092
+    4300192: Cube.001_key.091
+    4300194: Cube.001_key.090
+    4300196: Cube.001_key.087
+    4300198: Cube.001_key.085
+    4300200: Cube.001_key.084
+    4300202: Cube.001_key.083
+    4300204: Cube.001_key.082
+    4300206: Cube.001_key.081
+    4300208: Cube.001_key.080
+    4300210: Cube.001_key.079
+    4300212: Cube.001_key.078
+    4300214: Cube.001_key.077
+    4300216: Cube.001_key.076
+    4300218: Cube.001_key.075
+    4300220: Cube.001_key.074
+    4300222: Cube.001_key.073
+    4300224: Cube.001_key.072
+    4300226: Cube.001_key.071
+    4300228: Cube.001_key.070
+    4300230: Cube.001_key.069
+    4300232: Cube.001_key.068
+    4300234: Cube.001_key.067
+    4300236: Cube.001_key.066
+    4300238: Cube.001_key.065
+    4300240: Cube.001_key.064
+    4300242: Cube.001_key.063
+    4300244: Cube.001_key.062
+    4300246: Cube.001_key.061
+    4300248: Cube.001_key.060
+    4300250: Cube.001_key.059
+    4300252: Cube.001_key.058
+    4300254: Cube.001_key.057
+    4300256: Cube.001_key.056
+    4300258: Cube.001_key.055
+    4300260: Cube.001_key.054
+    4300262: Cube.001_key.053
+    4300264: Cube.001_key.052
+    4300266: Cube.001_key.051
+    4300268: Cube.001_key.050
+    4300270: Cube.001_key.049
+    4300272: Cube.001_key.048
+    4300274: Cube.001_key.047
+    4300276: Cube.001_key.046
+    4300278: Cube.001_key.045
+    4300280: Cube.001_key.044
+    4300282: Cube.001_key.043
+    4300284: Cube.001_key.042
+    4300286: Cube.001_key.041
+    4300288: Cube.001_key.040
+    4300290: Cube.001_key.039
+    4300292: Cube.001_key.038
+    4300294: Cube.001_key.037
+    4300296: Cube.001_key.036
+    4300298: Cube.001_key.035
+    4300300: Cube.001_key.034
+    4300302: Cube.001_key.033
+    4300304: Cube.001_key.032
+    4300306: Cube.001_key.031
+    4300308: Cube.001_key.030
+    4300310: Cube.001_key.029
+    4300312: Cube.001_key.028
+    4300314: Cube.001_key.027
+    4300316: Cube.001_key.026
+    4300318: Cube.001_key.025
+    4300320: Cube.001_key.024
+    4300322: Cube.001_key.023
+    4300324: Cube.001_key.022
+    4300326: Cube.001_key.021
+    4300328: Cube.001_key.020
+    4300330: Cube.001_key.019
+    4300332: Cube.001_key.017
+    4300334: Cube.001_key.015
+    4300336: Cube.001_key.014
+    4300338: Cube.001_key.013
+    4300340: Cube.001_key.012
+    4300342: Cube.001_key.011
+    4300344: Cube.001_key.010
+    4300346: Cube.001_key.009
+    4300348: Cube.001_key.008
+    4300350: Cube.001_key.007
+    4300352: Cube.001_key.006
+    4300354: Cube.001_key.005
+    4300356: Cube.001_key.004
+    4300358: Cube.001_key.003
+    4300360: Cube.001_key.002
+    4300362: Cube.001_key.001
+    7400000: Fracture 03
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Fracture 03
+      takeName: Scene
+      firstFrame: 1
+      lastFrame: 250
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Cube.001_key.001
+        weight: 1
+      - path: Cube.001_key.002
+        weight: 1
+      - path: Cube.001_key.003
+        weight: 1
+      - path: Cube.001_key.004
+        weight: 1
+      - path: Cube.001_key.005
+        weight: 1
+      - path: Cube.001_key.006
+        weight: 1
+      - path: Cube.001_key.007
+        weight: 1
+      - path: Cube.001_key.008
+        weight: 1
+      - path: Cube.001_key.009
+        weight: 1
+      - path: Cube.001_key.010
+        weight: 1
+      - path: Cube.001_key.011
+        weight: 1
+      - path: Cube.001_key.012
+        weight: 1
+      - path: Cube.001_key.013
+        weight: 1
+      - path: Cube.001_key.014
+        weight: 1
+      - path: Cube.001_key.015
+        weight: 1
+      - path: Cube.001_key.017
+        weight: 1
+      - path: Cube.001_key.019
+        weight: 1
+      - path: Cube.001_key.020
+        weight: 1
+      - path: Cube.001_key.021
+        weight: 1
+      - path: Cube.001_key.022
+        weight: 1
+      - path: Cube.001_key.023
+        weight: 1
+      - path: Cube.001_key.024
+        weight: 1
+      - path: Cube.001_key.025
+        weight: 1
+      - path: Cube.001_key.026
+        weight: 1
+      - path: Cube.001_key.027
+        weight: 1
+      - path: Cube.001_key.028
+        weight: 1
+      - path: Cube.001_key.029
+        weight: 1
+      - path: Cube.001_key.030
+        weight: 1
+      - path: Cube.001_key.031
+        weight: 1
+      - path: Cube.001_key.032
+        weight: 1
+      - path: Cube.001_key.033
+        weight: 1
+      - path: Cube.001_key.034
+        weight: 1
+      - path: Cube.001_key.035
+        weight: 1
+      - path: Cube.001_key.036
+        weight: 1
+      - path: Cube.001_key.037
+        weight: 1
+      - path: Cube.001_key.038
+        weight: 1
+      - path: Cube.001_key.039
+        weight: 1
+      - path: Cube.001_key.040
+        weight: 1
+      - path: Cube.001_key.041
+        weight: 1
+      - path: Cube.001_key.042
+        weight: 1
+      - path: Cube.001_key.043
+        weight: 1
+      - path: Cube.001_key.044
+        weight: 1
+      - path: Cube.001_key.045
+        weight: 1
+      - path: Cube.001_key.046
+        weight: 1
+      - path: Cube.001_key.047
+        weight: 1
+      - path: Cube.001_key.048
+        weight: 1
+      - path: Cube.001_key.049
+        weight: 1
+      - path: Cube.001_key.050
+        weight: 1
+      - path: Cube.001_key.051
+        weight: 1
+      - path: Cube.001_key.052
+        weight: 1
+      - path: Cube.001_key.053
+        weight: 1
+      - path: Cube.001_key.054
+        weight: 1
+      - path: Cube.001_key.055
+        weight: 1
+      - path: Cube.001_key.056
+        weight: 1
+      - path: Cube.001_key.057
+        weight: 1
+      - path: Cube.001_key.058
+        weight: 1
+      - path: Cube.001_key.059
+        weight: 1
+      - path: Cube.001_key.060
+        weight: 1
+      - path: Cube.001_key.061
+        weight: 1
+      - path: Cube.001_key.062
+        weight: 1
+      - path: Cube.001_key.063
+        weight: 1
+      - path: Cube.001_key.064
+        weight: 1
+      - path: Cube.001_key.065
+        weight: 1
+      - path: Cube.001_key.066
+        weight: 1
+      - path: Cube.001_key.067
+        weight: 1
+      - path: Cube.001_key.068
+        weight: 1
+      - path: Cube.001_key.069
+        weight: 1
+      - path: Cube.001_key.070
+        weight: 1
+      - path: Cube.001_key.071
+        weight: 1
+      - path: Cube.001_key.072
+        weight: 1
+      - path: Cube.001_key.073
+        weight: 1
+      - path: Cube.001_key.074
+        weight: 1
+      - path: Cube.001_key.075
+        weight: 1
+      - path: Cube.001_key.076
+        weight: 1
+      - path: Cube.001_key.077
+        weight: 1
+      - path: Cube.001_key.078
+        weight: 1
+      - path: Cube.001_key.079
+        weight: 1
+      - path: Cube.001_key.080
+        weight: 1
+      - path: Cube.001_key.081
+        weight: 1
+      - path: Cube.001_key.082
+        weight: 1
+      - path: Cube.001_key.083
+        weight: 1
+      - path: Cube.001_key.084
+        weight: 1
+      - path: Cube.001_key.085
+        weight: 1
+      - path: Cube.001_key.087
+        weight: 1
+      - path: Cube.001_key.090
+        weight: 1
+      - path: Cube.001_key.091
+        weight: 1
+      - path: Cube.001_key.092
+        weight: 1
+      - path: Cube.001_key.093
+        weight: 1
+      - path: Cube.001_key.095
+        weight: 1
+      - path: Cube.001_key.096
+        weight: 1
+      - path: Cube.001_key.097
+        weight: 1
+      - path: Cube.001_key.098
+        weight: 1
+      - path: Cube.001_key.099
+        weight: 1
+      - path: Cube.001_key.100
+        weight: 1
+      - path: Cube.001_key.101
+        weight: 1
+      - path: Cube.001_key.102
+        weight: 1
+      - path: Cube.001_key.103
+        weight: 1
+      - path: Cube.001_key.104
+        weight: 1
+      - path: Cube.001_key.105
+        weight: 1
+      - path: Cube.001_key.106
+        weight: 1
+      - path: Cube.001_key.107
+        weight: 1
+      - path: Cube.001_key.108
+        weight: 1
+      - path: Cube.001_key.109
+        weight: 1
+      - path: Cube.001_key.110
+        weight: 1
+      - path: Cube.001_key.111
+        weight: 1
+      - path: Cube.001_key.112
+        weight: 1
+      - path: Cube.001_key.113
+        weight: 1
+      - path: Cube.001_key.114
+        weight: 1
+      - path: Cube.001_key.115
+        weight: 1
+      - path: Cube.001_key.116
+        weight: 1
+      - path: Cube.001_key.117
+        weight: 1
+      - path: Cube.001_key.118
+        weight: 1
+      - path: Cube.001_key.119
+        weight: 1
+      - path: Cube.001_key.120
+        weight: 1
+      - path: Cube.001_key.121
+        weight: 1
+      - path: Cube.001_key.122
+        weight: 1
+      - path: Cube.001_key.123
+        weight: 1
+      - path: Cube.001_key.124
+        weight: 1
+      - path: Cube.001_key.125
+        weight: 1
+      - path: Cube.001_key.126
+        weight: 1
+      - path: Cube.001_key.127
+        weight: 1
+      - path: Cube.001_key.128
+        weight: 1
+      - path: Cube.001_key.129
+        weight: 1
+      - path: Cube.001_key.130
+        weight: 1
+      - path: Cube.001_key.131
+        weight: 1
+      - path: Cube.001_key.132
+        weight: 1
+      - path: Cube.001_key.133
+        weight: 1
+      - path: Cube.001_key.134
+        weight: 1
+      - path: Cube.001_key.135
+        weight: 1
+      - path: Cube.001_key.136
+        weight: 1
+      - path: Cube.001_key.137
+        weight: 1
+      - path: Cube.001_key.138
+        weight: 1
+      - path: Cube.001_key.139
+        weight: 1
+      - path: Cube.001_key.140
+        weight: 1
+      - path: Cube.001_key.141
+        weight: 1
+      - path: Cube.001_key.142
+        weight: 1
+      - path: Cube.001_key.143
+        weight: 1
+      - path: Cube.001_key.144
+        weight: 1
+      - path: Cube.001_key.145
+        weight: 1
+      - path: Cube.001_key.146
+        weight: 1
+      - path: Cube.001_key.147
+        weight: 1
+      - path: Cube.001_key.148
+        weight: 1
+      - path: Cube.001_key.149
+        weight: 1
+      - path: Cube.001_key.150
+        weight: 1
+      - path: Cube.001_key.151
+        weight: 1
+      - path: Cube.001_key.152
+        weight: 1
+      - path: Cube.001_key.153
+        weight: 1
+      - path: Cube.001_key.154
+        weight: 1
+      - path: Cube.001_key.155
+        weight: 1
+      - path: Cube.001_key.156
+        weight: 1
+      - path: Cube.001_key.157
+        weight: 1
+      - path: Cube.001_key.158
+        weight: 1
+      - path: Cube.001_key.159
+        weight: 1
+      - path: Cube.001_key.160
+        weight: 1
+      - path: Cube.001_key.161
+        weight: 1
+      - path: Cube.001_key.162
+        weight: 1
+      - path: Cube.001_key.163
+        weight: 1
+      - path: Cube.001_key.164
+        weight: 1
+      - path: Cube.001_key.165
+        weight: 1
+      - path: Cube.001_key.166
+        weight: 1
+      - path: Cube.001_key.167
+        weight: 1
+      - path: Cube.001_key.168
+        weight: 1
+      - path: Cube.001_key.170
+        weight: 1
+      - path: Cube.001_key.171
+        weight: 1
+      - path: Cube.001_key.173
+        weight: 1
+      - path: Cube.001_key.174
+        weight: 1
+      - path: Cube.001_key.175
+        weight: 1
+      - path: Cube.001_key.176
+        weight: 1
+      - path: Cube.001_key.177
+        weight: 1
+      - path: Cube.001_key.178
+        weight: 1
+      - path: Cube.001_key.179
+        weight: 1
+      - path: Cube.001_key.180
+        weight: 1
+      - path: Cube.001_key.181
+        weight: 1
+      - path: Cube.001_key.182
+        weight: 1
+      - path: Cube.001_key.183
+        weight: 1
+      - path: Cube.001_key.184
+        weight: 1
+      - path: Cube.001_key.185
+        weight: 1
+      - path: Cube.001_key.186
+        weight: 1
+      - path: Cube.001_key.187
+        weight: 1
+      - path: Cube.001_key.188
+        weight: 1
+      - path: Cube.001_key.189
+        weight: 1
+      - path: Cube.001_key.190
+        weight: 1
+      maskType: 0
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
