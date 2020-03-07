@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCController : MonoBehaviour
+public class NPCController : MonoBehaviour, Observer
 {
     public GameObject Player;       // Player의 위치를 받기 위함.
     public _PlayerController playerController;
@@ -18,7 +18,7 @@ public class NPCController : MonoBehaviour
     Vector3 initPosition;
     IEnumerator RanEnumerator;
     public enum STATE { IDLE, HI, TALK, WALK }
-    public enum DIR { up,down,right,left}
+    public enum DIR { up, down, right, left }
     DIR dir;
     public STATE state;
     public bool isTalk;
@@ -27,11 +27,12 @@ public class NPCController : MonoBehaviour
     public UnityEngine.UI.Image tooltip;
     public GameObject tooltipCanvas;
     public Sprite[] tooltipSprite;
-    bool isExit;
     bool isBack;
     // Use this for initialization
     private void Awake()
     {
+        GameManager.OnGameStart += GameManager_OnGameStart;
+        GameManager.OnGameReset += GameManager_OnGameReset;
         groupController = GetComponentInParent<GroupController>();
         animator = GetComponent<Animator>();
         initQuaternion = transform.rotation;
@@ -39,8 +40,6 @@ public class NPCController : MonoBehaviour
         state = STATE.TALK;
         animator.SetInteger("Animation_int", Random.Range(0, 9));
         animator.SetInteger("State", (int)state);
-        GameManager.OnGameStart += GameManager_OnGameStart;
-        GameManager.OnGameReset += GameManager_OnGameReset;
         tooltip.gameObject.SetActive(false);
         tooltip.gameObject.transform.localRotation = Quaternion.Euler(0, 180, 0);
         tooltipCanvas = tooltip.transform.parent.gameObject;
@@ -63,9 +62,6 @@ public class NPCController : MonoBehaviour
         isTrigger = false;
         isBack = false;
         state = STATE.TALK;
-        if (isExit)
-            groupController.Join(this);
-        isExit = false;
         animator.SetInteger("Animation_int", Random.Range(0, 9));
         animator.SetInteger("State", (int)state);
         tooltip.gameObject.SetActive(false);
@@ -107,7 +103,7 @@ public class NPCController : MonoBehaviour
                     {
                         isTalk = false;
                         tooltip.gameObject.SetActive(true);
-                    //    tooltip.transform.LookAt(tooltip.transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
+                        //    tooltip.transform.LookAt(tooltip.transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
                         state = STATE.TALK;
                         animator.SetInteger("Animation_int", Random.Range(0, 10));
                         animator.SetInteger("State", (int)state);
@@ -117,6 +113,7 @@ public class NPCController : MonoBehaviour
                         tooltip.gameObject.SetActive(false);
                         playerController.isTrigger = false;
                         isTrigger = false;
+                        if(enumerator == null)
                         enumerator = MoveObject();
                         StartCoroutine(enumerator);
                         if (RanEnumerator == null)
@@ -141,9 +138,9 @@ public class NPCController : MonoBehaviour
                 if (Vector3.Distance(this.transform.position, initPosition) < 1f)
                 {
                     this.transform.position = initPosition;
+                    this.transform.rotation = initQuaternion;
                     isBack = false;
-                    isExit = false;
-                    groupController.Join(this);
+                    groupController.RegisterObserver(this);
                     state = STATE.TALK;
                     animator.SetInteger("Animation_int", Random.Range(0, 10));
                     animator.SetInteger("State", (int)state);
@@ -164,7 +161,7 @@ public class NPCController : MonoBehaviour
                 Vector3 v = Player.transform.position - transform.position;
                 v.x = v.z = 0;
                 transform.LookAt(Player.transform.position - v);
-              //  tooltip.transform.LookAt(tooltip.transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
+                //  tooltip.transform.LookAt(tooltip.transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
                 state = STATE.IDLE;
                 animator.SetInteger("State", (int)state);
             }
@@ -178,7 +175,7 @@ public class NPCController : MonoBehaviour
             }
         }
 
-        if(tooltip.gameObject.activeInHierarchy)
+        if (tooltip.gameObject.activeInHierarchy)
         {
             Vector3 v = Camera.main.transform.position - tooltipCanvas.transform.position;
             v.x = v.z = 0;
@@ -278,7 +275,7 @@ public class NPCController : MonoBehaviour
                 StartCoroutine(enumerator);
                 StartCoroutine(Timer());
             }
-        if (!isGroup&&collision.collider.CompareTag("NPC") && !isBack)
+        if (!isGroup && collision.collider.CompareTag("NPC") && !isBack)
         {
             dir = (DIR)Random.Range(0, 4);
             switch (dir)
@@ -322,27 +319,27 @@ public class NPCController : MonoBehaviour
                     break;
             }
             this.transform.rotation = Quaternion.Euler(0, dir1, 0);
-            yield return StartCoroutine(YieldTime(5.0f));
+            yield return new WaitForSecondsRealtime(5.0f);
         }
     }
     IEnumerator Timer()
     {
         isTimer = true;
-        yield return StartCoroutine(YieldTime(10.0f));
+        yield return new WaitForSecondsRealtime(10.0f);
         isTimer = false;
     }
     public IEnumerator Talk()
     {
         isTalk = false;
-     //   bool isLoop = true;
+        //   bool isLoop = true;
         playerController._npc = this;
         playerController._npc.tooltipColor = tooltipColor;
         yield return new WaitForSecondsRealtime(0.25f);
         //  while (isLoop)
         {
-           // yield return null;
+            // yield return null;
             tooltip.gameObject.SetActive(true);
-          //  tooltip.transform.LookAt(tooltip.transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
+            //  tooltip.transform.LookAt(tooltip.transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
             state = STATE.TALK;
             animator.SetInteger("Animation_int", Random.Range(0, 10));
             animator.SetInteger("State", (int)state);
@@ -357,7 +354,7 @@ public class NPCController : MonoBehaviour
         yield return new WaitForSecondsRealtime(2.0f);
         tooltip.gameObject.SetActive(false);
         isTalk = true;
-          while (!playerController.isMotion)
+        while (!playerController.isMotion)
         {
             yield return null;
         }
@@ -372,9 +369,9 @@ public class NPCController : MonoBehaviour
         while (isLoop)
         {
             yield return null;
-            if (isExit)
+            if (!isGroup)
             {
-                yield return StartCoroutine(YieldTime(10.0f));        //NPC 탈출 후 복귀 시간
+                yield return new WaitForSecondsRealtime(10.0f);        //NPC 탈출 후 복귀 시간
                 Vector3 v = initPosition - transform.position;
                 v.x = v.z = 0;
                 transform.LookAt(initPosition - v);
@@ -391,31 +388,42 @@ public class NPCController : MonoBehaviour
             }
             else
             {
-                yield return StartCoroutine(YieldTime(60.0f));              // NPC 탈출 쿨타임 
+                yield return new WaitForSecondsRealtime(30.0f);              // NPC 탈출 쿨타임 
                 if (10 > Random.Range(0, 100) && !isTrigger)        // NPC 탈출 확률
                 {
-                    isExit = true;
-                    groupController.Leave(this);
+                    groupController.RemoveObserver(this);
                     state = STATE.WALK;
                     animator.SetTrigger("Walk");
                     animator.SetInteger("State", (int)state);
-
                 }
             }
         }
     }
-    IEnumerator YieldTime(float _Time)
+    public void Excute(bool isCheck)
     {
-        float _time = 0f;
-        bool isLoop = true;
-        while (isLoop)
+        if (isCheck)
         {
-            yield return new WaitForFixedUpdate();
-            _time += Time.fixedDeltaTime;
-            if (_time > _Time)
+            isTrigger = true;
+            if (Random.Range(1, 101) < 50)
             {
-                isLoop = false;
+                animator.SetInteger("Animation_int", 0);
+                animator.SetInteger("State", (int)STATE.HI);
             }
+            StartCoroutine(HIEmotion());
         }
+        else
+        {
+            isTrigger = false;
+        }
+    }
+
+    IEnumerator HIEmotion()
+    {
+        tooltip.gameObject.SetActive(true);
+        //  groupNPCList[i].tooltip.transform.LookAt(groupNPCList[i].tooltip.transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
+        tooltip.sprite = tooltipSprite[8];
+        yield return new WaitForSecondsRealtime(1.0f);
+        tooltip.gameObject.SetActive(false);
+        tooltip.sprite = tooltipSprite[(int)tooltipColor];
     }
 }

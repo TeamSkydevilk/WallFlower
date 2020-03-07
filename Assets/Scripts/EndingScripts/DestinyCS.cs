@@ -21,7 +21,7 @@ public class DestinyCS : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
             SoundManager.instance.StopAudio(0);
             SoundManager.instance.StopAudio(1);

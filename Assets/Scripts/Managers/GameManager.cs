@@ -83,9 +83,9 @@ public class GameManager : MonoBehaviour
         TutorialImage[2].SetActive(true);
         TutorialImage[2].GetComponent<UnityEngine.UI.Image>().sprite = TutorialSprites[0];
         bool isLoop = true;
-        yield return StartCoroutine(YieldTime(5.0f));      // 튜토리얼 영상 5초 보여 준 후 게임 시작.
+        yield return new WaitForSecondsRealtime(5.0f);     // 튜토리얼 영상 5초 보여 준 후 게임 시작.
         TutorialImage[2].GetComponent<UnityEngine.UI.Image>().sprite = TutorialSprites[1];
-        yield return StartCoroutine(YieldTime(3.0f));            // 튜토리얼 영상 5초 보여 준 후 게임 시작.
+        yield return new WaitForSecondsRealtime(3.0f);          // 튜토리얼 영상 5초 보여 준 후 게임 시작.
         OnGameStart();
         TutorialImage[2].SetActive(false);
         time_text.text = "6:00";
@@ -105,7 +105,7 @@ public class GameManager : MonoBehaviour
                     isLoop = false;
                 }
             }
-            yield return StartCoroutine(YieldTime(0.1f));
+            yield return new WaitForSecondsRealtime(0.1f);
         }
     }
     public void GameStart()                    //플레이어가 스타트 버튼을 누르면 타이머 작동
@@ -124,13 +124,13 @@ public class GameManager : MonoBehaviour
     {
         bool isLoop = true;
         fade.SetActive(true);
-        yield return StartCoroutine(YieldTime(0.05f));
+        yield return new WaitForSecondsRealtime(0.05f);
         Camera.main.cullingMask &= ~(1 << 8);
         TutorialImage[3].SetActive(true);
         float i = 1;
         while (isLoop)
         {
-            yield return StartCoroutine(YieldTime(0.01f));
+            yield return new WaitForSecondsRealtime(0.01f);
             CreditText.localPosition = new Vector3(CreditText.localPosition.x, CreditText.localPosition.y + 0.5f, CreditText.localPosition.z);
             if (CreditText.localPosition.y > 120)
             {
@@ -149,20 +149,5 @@ public class GameManager : MonoBehaviour
         }
         Camera.main.cullingMask |= (1 << 8);
         OnGameReset();
-    }
-
-    IEnumerator YieldTime(float _Time)
-    {
-        float _time = 0f;
-        bool isLoop = true;
-        while (isLoop)
-        {
-            yield return new WaitForFixedUpdate();
-            _time += Time.fixedDeltaTime;
-            if(_time>_Time)
-            {
-                isLoop = false;
-            }
-        }
     }
 }

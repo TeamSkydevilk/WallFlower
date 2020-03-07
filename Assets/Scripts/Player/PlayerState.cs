@@ -19,6 +19,8 @@ public class PlayerState : MonoBehaviour
     bool isAcid;
     bool isHpWarning;
     bool isPresenceWarning;
+
+    EndingInterface ending;
     private void Awake()
     {
         ShadowImage.color = new Color(1, 1, 1, 0f);
@@ -120,7 +122,7 @@ public class PlayerState : MonoBehaviour
         acidTrip.enabled = true;
         while (isLoop)
         {
-            yield return StartCoroutine(YieldTime(0.1f));
+            yield return new WaitForSecondsRealtime(0.1f);
             acidTrip.DistortionStrength += 0.05f; 
             if (acidTrip.DistortionStrength > 1f)
             {
@@ -134,7 +136,7 @@ public class PlayerState : MonoBehaviour
         acidTrip.enabled = false;
         while (isLoop)
         {
-            yield return StartCoroutine(YieldTime(0.1f));
+            yield return new WaitForSecondsRealtime(0.1f);
             //     audioSource.volume = 1f;
             acidTrip.DistortionStrength -= 0.05f;
             if (acidTrip.DistortionStrength < 0f)
@@ -143,7 +145,7 @@ public class PlayerState : MonoBehaviour
             }
         }
     }
-    void Hp_Normal()
+    public void Hp_Normal()
     {
         if (acidEnumerator != null)
         {
@@ -153,7 +155,7 @@ public class PlayerState : MonoBehaviour
         acidEnumerator = Deacid();
         StartCoroutine(acidEnumerator);
     }
-    void Hp_Warning()
+    public void Hp_Warning()
     {
         if (acidEnumerator != null)
         {
@@ -167,7 +169,8 @@ public class PlayerState : MonoBehaviour
     {
         StopCoroutine(acidEnumerator);
         acidTrip.enabled = false;
-        StartCoroutine(Melting());
+        ending = new MeltingEnding();
+        StartCoroutine(ending.StartEnding());
     }
     public void Presence_Zero()
     {
@@ -184,38 +187,9 @@ public class PlayerState : MonoBehaviour
             ShadowWallMaterial[0].color = color;
             ShadowWallMaterial[1].color = color;
             ShadowWallMaterial[2].color = color;
-            yield return StartCoroutine(YieldTime(0.1f));
+            yield return new WaitForSecondsRealtime(0.1f);
         }
         ShadowImage.color = new Color(1, 1, 1, 0f);
         ChinemachineManager.instance.StartChinema(3);
-    }
-    IEnumerator Melting()
-    {
-        SoundManager.instance.StartAudio(SoundManager.instance.audioClips[2], 0);
-        SoundManager.instance.StartAudio(SoundManager.instance.audioClips[3], 1);
-        Quaternion initvec = GameManager.instance.Player_Transform.rotation;
-        for (float i = 1; i >= 0f; i -= 0.05f)
-        {
-            GameManager.instance.Player_Transform.gameObject.transform.localScale = new Vector3(1, i, 1);
-            GameManager.instance.Player_Transform.rotation = initvec;
-            yield return StartCoroutine(YieldTime(0.1f));
-        }
-        yield return StartCoroutine(YieldTime(0.5f));
-        GameManager.instance.fade.SetActive(true);
-        ChinemachineManager.instance.isPlay = false;
-    }
-    IEnumerator YieldTime(float _Time)
-    {
-        float _time = 0f;
-        bool isLoop = true;
-        while (isLoop)
-        {
-            yield return new WaitForFixedUpdate();
-            _time += Time.fixedDeltaTime;
-            if (_time > _Time)
-            {
-                isLoop = false;
-            }
-        }
     }
 }

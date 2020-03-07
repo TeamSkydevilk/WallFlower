@@ -53,8 +53,24 @@ public class _PlayerController : MonoBehaviour
     Vector3 InitPlayerPosition;
     Quaternion InitPlayerRotation;
     bool isStart = false;
+
+    bool isBar;
+    int BarToolTipIdx;
+    public Sprite[] BarTooltipSprites;
+    /// <summary>
+    /// 술마신 상태
+    /// </summary>
+    [SerializeField] private float alcoholSpeed = 2.0f;     //술 마신 다음 속도
+    bool isAlcohol; // true 술취함 false 술깸
+    Vector3 beforeAlcoholPosition;
+    Quaternion beforeAlcoholRotation;
+    public GameObject SoulMateObj;
+
     private void Awake()
     {
+        GameManager.OnGameStart += GameManager_OnGameStart;
+        GameManager.OnGameReset += GameManager_OnGameReset;
+
         is_Input = true;
         isGreeting = false;
         isMotion = false;
@@ -68,8 +84,6 @@ public class _PlayerController : MonoBehaviour
         InitPlayerPosition = playerTransfrom.position;
         InitPlayerRotation = playerTransfrom.rotation;
         rigidbody = GetComponent<Rigidbody>();
-        GameManager.OnGameStart += GameManager_OnGameStart;
-        GameManager.OnGameReset += GameManager_OnGameReset;
         if (viewCam == null)
         {
             viewCam = Camera.main;
@@ -111,11 +125,14 @@ public class _PlayerController : MonoBehaviour
         Charactor_Rotate.transform.localRotation = InitCharactor_Rotate;
         playerTransfrom.position = InitPlayerPosition;
         playerTransfrom.rotation = InitPlayerRotation;
+        isAlcohol = false;
+        isBar = false;
     }
 
     //게임 시작 이벤트
     private void GameManager_OnGameStart()
     {
+        //SoulMateObj = GameObject.FindGameObjectWithTag("SoulMate");
         laserObject.SetActive(false);
         StartCoroutine(enumerator2);
     }
@@ -163,73 +180,96 @@ public class _PlayerController : MonoBehaviour
                     PlayerMove();
                 else
                 {
-                    if (_npc != null && _npc.isTalk)
+                    if (isBar)
                     {
-                        if (Input.GetMouseButtonDown(1) && !isOpenEmotion)
+                        if (Input.GetMouseButtonDown(1))
                         {
-                            isOpenEmotion = true;
-                            tooltipImage.gameObject.SetActive(true);
-                         //   tooltipTransfrom.transform.LookAt(tooltipTransfrom.transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
-                            tooltipArrows[0].gameObject.SetActive(true);
-                            tooltipArrows[1].gameObject.SetActive(true);
-                            tooltipArrows[0].localScale = new Vector3(0.5f, 0.5f, 0.5f);
-                            tooltipArrows[1].localScale = new Vector3(0.5f, 0.5f, 0.5f);
-                            return;
+                            tooltipTransfrom.transform.LookAt(Camera.main.transform);
+                            BarToolTip();
                         }
-                     //   tooltipTransfrom.transform.LookAt(tooltipTransfrom.transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
-                        ToolTipColor(_npc.tooltipColor, motionidx);
-                        if (isOpenEmotion)
+                        animator.SetInteger("State", 0);
+                        if (Input.GetKeyDown(KeyCode.P))
                         {
-                            if (ismotionTimer)
+                            tooltipImage.gameObject.SetActive(false);
+                            isBar = false;
+                            isTrigger = false;
+                            if (BarToolTipIdx == 0)
                             {
-                                motionTimer += Time.fixedDeltaTime;
-                                if (motionTimer > 2.0f)
-                                    EndTalkAnimation();
-                            }
-                            else
-                            {
-                                joystickTimer += Time.fixedDeltaTime;
-                                if (Input.GetKey(KeyCode.RightArrow))
-                                {
-                                    tooltipArrows[1].localScale = new Vector3(1f, 1f, 1);
-                                    if (joystickTimer > 0.15f)
-                                    {
-                                        joystickTimer = 0;
-                                        if (motionidx == 3)
-                                            motionidx = 0;
-                                        else
-                                            ++motionidx;
-                                    }
-                                }
-                                else if (Input.GetKey(KeyCode.LeftArrow))
-                                {
-                                    tooltipArrows[0].localScale = new Vector3(1f, 1f, 1);
-                                    if (joystickTimer > 0.15f)
-                                    {
-                                        joystickTimer = 0;
-                                        if (motionidx == 0)
-                                            motionidx = 3;
-                                        else
-                                            --motionidx;
-                                    }
-                                }
-                                else
-                                {
-                                    tooltipArrows[0].localScale = new Vector3(0.5f, 0.5f, 0.5f);
-                                    tooltipArrows[1].localScale = new Vector3(0.5f, 0.5f, 0.5f);
-                                }
-                                if (Input.GetMouseButtonDown(1))
-                                {
-                                    ismotionTimer = true;
-                                    tooltipArrows[0].gameObject.SetActive(false);
-                                    tooltipArrows[1].gameObject.SetActive(false);
-                                    animator.SetInteger("Animation_int", Random.Range(0, 3));
-                                    animator.SetTrigger("Talk");
-                                }
+                                ChinemachineManager.instance.StartChinema(2);
+
                             }
                         }
                     }
-                    animator.SetInteger("State", (int)NPCController.STATE.IDLE);
+                    else
+                    {
+                        if (_npc != null && _npc.isTalk)
+                        {
+                            if (Input.GetMouseButtonDown(1) && !isOpenEmotion)
+                            {
+                                isOpenEmotion = true;
+                                tooltipImage.gameObject.SetActive(true);
+                                //   tooltipTransfrom.transform.LookAt(tooltipTransfrom.transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
+                                tooltipArrows[0].gameObject.SetActive(true);
+                                tooltipArrows[1].gameObject.SetActive(true);
+                                tooltipArrows[0].localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                                tooltipArrows[1].localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                                return;
+                            }
+                            //   tooltipTransfrom.transform.LookAt(tooltipTransfrom.transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
+                            ToolTipColor(_npc.tooltipColor, motionidx);
+                            if (isOpenEmotion)
+                            {
+                                if (ismotionTimer)
+                                {
+                                    motionTimer += Time.fixedDeltaTime;
+                                    if (motionTimer > 2.0f)
+                                        EndTalkAnimation();
+                                }
+                                else
+                                {
+                                    joystickTimer += Time.fixedDeltaTime;
+                                    if (Input.GetKey(KeyCode.RightArrow))
+                                    {
+                                        tooltipArrows[1].localScale = new Vector3(1f, 1f, 1);
+                                        if (joystickTimer > 0.15f)
+                                        {
+                                            joystickTimer = 0;
+                                            if (motionidx == 3)
+                                                motionidx = 0;
+                                            else
+                                                ++motionidx;
+                                        }
+                                    }
+                                    else if (Input.GetKey(KeyCode.LeftArrow))
+                                    {
+                                        tooltipArrows[0].localScale = new Vector3(1f, 1f, 1);
+                                        if (joystickTimer > 0.15f)
+                                        {
+                                            joystickTimer = 0;
+                                            if (motionidx == 0)
+                                                motionidx = 3;
+                                            else
+                                                --motionidx;
+                                        }
+                                    }
+                                    else
+                                    {
+                                        tooltipArrows[0].localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                                        tooltipArrows[1].localScale = new Vector3(0.5f, 0.5f, 0.5f);
+                                    }
+                                    if (Input.GetMouseButtonDown(1))
+                                    {
+                                        ismotionTimer = true;
+                                        tooltipArrows[0].gameObject.SetActive(false);
+                                        tooltipArrows[1].gameObject.SetActive(false);
+                                        animator.SetInteger("Animation_int", Random.Range(0, 3));
+                                        animator.SetTrigger("Talk");
+                                    }
+                                }
+                            }
+                        }
+                        animator.SetInteger("State", (int)NPCController.STATE.IDLE);
+                    }
                 }
                 MouseMove();
             }
@@ -460,9 +500,9 @@ public class _PlayerController : MonoBehaviour
                     animator.SetInteger("State", (int)NPCController.STATE.HI);
                     handState = HandState.Shake;
                     tooltipImage.gameObject.SetActive(true);
-                 //   tooltipTransfrom.transform.LookAt(tooltipTransfrom.transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
+                    //   tooltipTransfrom.transform.LookAt(tooltipTransfrom.transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
                     tooltipImage.sprite = HITooltipSprite;
-                    yield return StartCoroutine(YieldTime(0.5f));
+                    yield return new WaitForSecondsRealtime(0.5f);
                     tooltipImage.gameObject.SetActive(false);
                     isLoop = false;
                     handState = HandState.Idle;
@@ -482,9 +522,9 @@ public class _PlayerController : MonoBehaviour
                     animator.SetInteger("State", (int)NPCController.STATE.HI);
                     handState = HandState.Shake;
                     tooltipImage.gameObject.SetActive(true);
-                //    tooltipTransfrom.transform.LookAt(tooltipTransfrom.transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
+                    //    tooltipTransfrom.transform.LookAt(tooltipTransfrom.transform.position + Camera.main.transform.rotation * Vector3.forward, Camera.main.transform.rotation * Vector3.up);
                     tooltipImage.sprite = HITooltipSprite;
-                    yield return StartCoroutine(YieldTime(0.5f));
+                    yield return new WaitForSecondsRealtime(0.5f);
                     tooltipImage.gameObject.SetActive(false);
                     isLoop = false;
                     handState = HandState.Idle;
@@ -501,16 +541,22 @@ public class _PlayerController : MonoBehaviour
         {
             if (isTrigger && playerState.hp >= 0 && !ChinemachineManager.instance.isStart)
             {
-                playerState.hp -= 1;
+                if (!isAlcohol)
+                {
+                    playerState.hp -= 1;
+                }
                 playerState.presence += 1;
             }
             else if (!isTrigger && playerState.presence >= 0 && !ChinemachineManager.instance.isStart)
             {
-                playerState.presence -= 1;
-                playerState.hp += 1;
+                if (!isAlcohol)
+                {
+                    playerState.presence -= 1;
+                    playerState.hp += 1;
+                }
             }
             rigidbody.isKinematic = false;
-            yield return StartCoroutine(YieldTime(1.0f));
+            yield return new WaitForSecondsRealtime(1.0f);
             rigidbody.isKinematic = true;
         }
     }
@@ -527,18 +573,52 @@ public class _PlayerController : MonoBehaviour
         if (enumerator != null)
             StopCoroutine(enumerator);
     }
-    IEnumerator YieldTime(float _Time)
+
+    void BarToolTip()
     {
-        float _time = 0f;
-        bool isLoop = true;
-        while (isLoop)
+        if (BarToolTipIdx == 0)
         {
-            yield return new WaitForFixedUpdate();
-            _time += Time.fixedDeltaTime;
-            if (_time > _Time)
-            {
-                isLoop = false;
-            }
+            tooltipImage.sprite = BarTooltipSprites[++BarToolTipIdx];
         }
+        else
+        {
+            tooltipImage.sprite = BarTooltipSprites[--BarToolTipIdx];
+        }
+    }
+
+    public void AlcoholStart()
+    {
+        StartCoroutine(AlcoholTime());
+    }
+    IEnumerator AlcoholTime()
+    {
+        Debug.Log("알코올 시작");
+        this.transform.position = beforeAlcoholPosition;
+        this.transform.rotation = beforeAlcoholRotation;
+        isAlcohol = true;
+        playerState.Hp_Warning();
+        yield return new WaitForSecondsRealtime(30.0f);
+        playerState.Hp_Normal();
+        isAlcohol = false;
+        playerState.hp -= 10;
+        Debug.Log("알코올 끝");
+    }
+    public void EnterBar()
+    {
+        if (!isAlcohol)
+        {
+            tooltipImage.gameObject.SetActive(true);
+            tooltipTransfrom.transform.LookAt(Camera.main.transform);
+            BarToolTipIdx = 0;
+            BarToolTip();
+            isTrigger = true;
+            isBar = true;
+            beforeAlcoholPosition = this.transform.position;
+            beforeAlcoholRotation = this.transform.rotation;
+        }
+    }
+    public void ExitBar()
+    {
+        isBar = false;
     }
 }

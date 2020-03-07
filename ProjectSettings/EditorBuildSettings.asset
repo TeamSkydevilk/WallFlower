@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Finishing.unity
-    guid: 70e913194555307438f64a7fce1ce814
+    path: Assets/BLUEME.unity
+    guid: e64f2e7ae420eca4e911445da0641ff9
+  - enabled: 1
+    path: Assets/CatScene.unity
+    guid: 2967d6230f53ed54daf1a50b59d1909d
   m_configObjects: {}
