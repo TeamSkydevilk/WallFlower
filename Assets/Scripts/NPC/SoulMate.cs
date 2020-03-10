@@ -5,27 +5,19 @@ using UnityEngine.SceneManagement;
 
 public class SoulMate : MonoBehaviour
 {
-    public Object[] RandomObj;
+    SoulMateManager soulMateManager;
     private void Awake()
     {
-        GameManager.OnGameStart += GameManager_OnGameStart;
-        GameManager.OnGameReset += GameManager_OnGameReset;
+        soulMateManager = GameObject.Find("SoulMateManager").GetComponent<SoulMateManager>();
     }
-
-    private void GameManager_OnGameReset()
+    private void OnTriggerEnter(Collider other)
     {
-        StopAllCoroutines();
-    }
-
-    private void GameManager_OnGameStart()
-    {
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.transform.CompareTag("Player"))
+        if(other.gameObject.transform.CompareTag("Player"))
         {
-            Debug.Log("FIND SOULMATE");
-            SceneManager.LoadScene(1, LoadSceneMode.Single);
+            SoundManager.instance.StopAudio(0);
+            SoundManager.instance.StopAudio(1);
+            ChinemachineManager.instance.StartChinema(4);
+            soulMateManager.models[souldondes.instance.soulNPCIndex].SetActive(false);
         }
     }
 }
