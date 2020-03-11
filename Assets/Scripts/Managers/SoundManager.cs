@@ -20,7 +20,10 @@ public class SoundManager : MonoBehaviour
         }
         GameManager.OnGameStart += GameManager_OnGameStart;
     }
-
+    void OnDestroy()
+    {
+        GameManager.OnGameStart -= GameManager_OnGameStart;
+    }
     private void GameManager_OnGameStart()
     {
         for (int i = 0; i < BGM.Length; i++)

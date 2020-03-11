@@ -96,7 +96,11 @@ public class _PlayerController : MonoBehaviour
         isVR = false;
 #endif
     }
-
+    void OnDestroy()
+    {
+        GameManager.OnGameReset -= GameManager_OnGameReset;
+        GameManager.OnGameStart -= GameManager_OnGameStart;
+    }
     private void GameManager_OnGameReset()
     {
         if (enumerator != null)

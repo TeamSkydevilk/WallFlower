@@ -17,7 +17,10 @@ public class Fade : MonoBehaviour
         gameObject.SetActive(false);
         GameManager.OnGameReset += GameManager_OnGameReset;
     }
-    
+    void OnDestroy()
+    {
+        GameManager.OnGameReset -= GameManager_OnGameReset;
+    }
     private void GameManager_OnGameReset()
     {
         StopAllCoroutines();
@@ -71,7 +74,7 @@ public class Fade : MonoBehaviour
     {
         for (float i = 0; i < 1.2f; i += 0.01f)
         {
-            yield return StartCoroutine(YieldTime(0.01f));// fade 속도 
+            yield return new WaitForSecondsRealtime(0.01f);// fade 속도 
             image.color = new Color(0, 0, 0, i);
         }
     }
@@ -79,22 +82,8 @@ public class Fade : MonoBehaviour
     {
         for (float i = 1f; i > -0.2f; i -= 0.01f)
         {
-            yield return StartCoroutine(YieldTime(0.01f));// fade 속도 
+            yield return new WaitForSecondsRealtime(0.01f);// fade 속도 
             image.color = new Color(0, 0, 0, i);
-        }
-    }
-    IEnumerator YieldTime(float _Time)
-    {
-        float _time = 0f;
-        bool isLoop = true;
-        while (isLoop)
-        {
-            yield return new WaitForFixedUpdate();
-            _time += Time.fixedDeltaTime;
-            if (_time > _Time)
-            {
-                isLoop = false;
-            }
         }
     }
 }

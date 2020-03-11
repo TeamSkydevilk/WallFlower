@@ -43,7 +43,10 @@ public class GameManager : MonoBehaviour
         CreditText.gameObject.SetActive(false);
         OnGameReset += GameManager_OnGameReset;
     }
-
+    void OnDestroy()
+    {
+        GameManager.OnGameReset -= GameManager_OnGameReset;
+    }
     private void GameManager_OnGameReset()
     {
         StopAllCoroutines();
@@ -110,6 +113,7 @@ public class GameManager : MonoBehaviour
     }
     public void GameStart()                    //플레이어가 스타트 버튼을 누르면 타이머 작동
     {
+        OnGameReset();
         StartCoroutine(Timer());
     }
 

@@ -12,7 +12,10 @@ public class DestinyCS : MonoBehaviour
         InitQuaternion = transform.rotation;
         GameManager.OnGameReset += GameManager_OnGameReset;
     }
-
+    void OnDestroy()
+    {
+        GameManager.OnGameReset -= GameManager_OnGameReset;
+    }
     private void GameManager_OnGameReset()
     {
         transform.position = InitPosition;

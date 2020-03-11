@@ -31,6 +31,10 @@ public class ChinemachineManager : MonoBehaviour
         gameObjects[2].SetActive(false);
         gameObjects[3].SetActive(true);
     }
+    void OnDestroy()
+    {
+        GameManager.OnGameReset -= GameManager_OnGameReset;
+    }
     private void GameManager_OnGameReset()
     {
         isPlay = true;

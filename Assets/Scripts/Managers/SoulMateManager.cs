@@ -14,7 +14,10 @@ public class SoulMateManager : MonoBehaviour
         GameManager.OnGameStart += GameManager_OnGameStart;
         positions = transform.GetComponentsInChildren<Transform>();
     }
-
+    void OnDestroy()
+    {
+        GameManager.OnGameStart -= GameManager_OnGameStart;
+    }
     private void GameManager_OnGameStart()
     {
         int idx = Random.Range(0, positions.Length);

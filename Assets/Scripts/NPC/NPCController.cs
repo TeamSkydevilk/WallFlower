@@ -44,7 +44,11 @@ public class NPCController : MonoBehaviour, Observer
         tooltip.gameObject.transform.localRotation = Quaternion.Euler(0, 180, 0);
         tooltipCanvas = tooltip.transform.parent.gameObject;
     }
-
+    void OnDestroy()
+    {
+        GameManager.OnGameReset -= GameManager_OnGameReset;
+        GameManager.OnGameStart -= GameManager_OnGameStart;
+    }
     private void GameManager_OnGameReset()
     {
         if (enumerator != null)

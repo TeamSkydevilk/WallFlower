@@ -41,7 +41,11 @@ public class GroupController : MonoBehaviour, Subject
         GameManager.OnGameReset += GameManager_OnGameReset;
         GameManager.OnGameStart += GameManager_OnGameStart;
     }
-
+    void OnDestroy()
+    {
+        GameManager.OnGameReset -= GameManager_OnGameReset;
+        GameManager.OnGameStart -= GameManager_OnGameStart;
+    }
     private void GameManager_OnGameStart()
     {
         observers.Clear();

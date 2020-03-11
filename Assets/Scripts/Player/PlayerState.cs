@@ -31,7 +31,10 @@ public class PlayerState : MonoBehaviour
         InitCameraPosition = OVRCamerarigObj.transform.localPosition;
         InitCameraRotation = OVRCamerarigObj.transform.localRotation;
     }
-
+    void OnDestroy()
+    {
+        GameManager.OnGameReset -= GameManager_OnGameReset;
+    }
     private void GameManager_OnGameReset()
     {
         StopAllCoroutines();
