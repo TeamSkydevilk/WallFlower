@@ -36,7 +36,7 @@ public class OVRControllerHelper : MonoBehaviour
 	/// The root GameObject that represents the Oculus Touch for Quest And RiftS Controller model (Left).
 	/// </summary>
 	public GameObject m_modelOculusTouchQuestAndRiftSLeftController;
-   
+
 	/// <summary>
 	/// The root GameObject that represents the Oculus Touch for Quest And RiftS Controller model (Right).
 	/// </summary>
@@ -56,7 +56,8 @@ public class OVRControllerHelper : MonoBehaviour
 	/// The controller that determines whether or not to enable rendering of the controller model.
 	/// </summary>
 	public OVRInput.Controller m_controller;
-    private enum ControllerType
+
+	private enum ControllerType
 	{
 		GearVR, Go, QuestAndRiftS, Rift
 	}
@@ -127,8 +128,7 @@ public class OVRControllerHelper : MonoBehaviour
 
 	void Update()
 	{
-
-        bool controllerConnected = OVRInput.IsControllerConnected(m_controller);
+		bool controllerConnected = OVRInput.IsControllerConnected(m_controller);
 
 		if ((controllerConnected != m_prevControllerConnected) || !m_prevControllerConnectedCached)
 		{

@@ -1,21 +1,10 @@
 fileFormatVersion: 2
 guid: aed62bf3ae2456c408f247f96808ce96
+timeCreated: 1486166271
+licenseType: Store
 MonoImporter:
-  externalObjects: {}
   serializedVersion: 2
-  defaultReferences:
-  - m_modelGearVrController: {fileID: 100010, guid: 84c37137326e7b943a87be7ae2a7ea19,
-      type: 3}
-  - m_modelOculusGoController: {fileID: 100000, guid: e0f1914fdbfd3764faeff5474c0cbe1e,
-      type: 3}
-  - m_modelOculusTouchQuestAndRiftSLeftController: {fileID: 100000, guid: 32fbc8bcebb64584da5868aeeb086cda,
-      type: 3}
-  - m_modelOculusTouchQuestAndRiftSRightController: {fileID: 100000, guid: 37ba10a26a648144fa2390c8adfb2c8a,
-      type: 3}
-  - m_modelOculusTouchRiftLeftController: {fileID: 100038, guid: 45137ecb2b0f9ba45b80adefb16de509,
-      type: 3}
-  - m_modelOculusTouchRiftRightController: {fileID: 100038, guid: eb8e07cd3e0ce494f81482c6835d2b10,
-      type: 3}
+  defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -5,18 +5,28 @@ using UnityEngine.SceneManagement;
 
 public class SoulMate : MonoBehaviour
 {
-    SoulMateManager soulMateManager;
     public Sprite[] mals;
     public UnityEngine.UI.Image tooltip;
     public Animator soulMateAnimator;
-    public _PlayerController pc;
     public bool isCheck;
+    public UnityEngine.UI.Image image;
+    public _PlayerController pc;
     private void Awake()
     {
-        soulMateManager = GameObject.Find("SoulMateManager").GetComponent<SoulMateManager>();
         soulMateAnimator = GetComponent<Animator>();
         tooltip.gameObject.SetActive(false);
+        GameManager.OnGameStart += GameManager_OnGameStart;
     }
+    private void OnDestroy()
+    {
+        GameManager.OnGameStart -= GameManager_OnGameStart;
+    }
+    private void GameManager_OnGameStart()
+    {
+        image.gameObject.SetActive(false);
+        soulMateAnimator.SetInteger("Animation_int", 990);
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.transform.CompareTag("Player")&&!isCheck)
@@ -24,14 +34,16 @@ public class SoulMate : MonoBehaviour
             isCheck = true;
             pc = other.GetComponent<_PlayerController>();
             pc.isTrigger = true;
+            pc.transform.position = pc.transform.position;
+            pc.transform.rotation = pc.transform.rotation;
             pc.tooltipTransfrom.transform.LookAt(Camera.main.transform);
             tooltip.gameObject.transform.LookAt(Camera.main.transform);
-            Vector3 v = other.gameObject.transform.position - transform.position;
+            Vector3 v = pc.transform.position - transform.position;
             v.x = v.z = 0;
-            transform.LookAt(other.gameObject.transform.position - v);
-            v = transform.position - other.transform.position;
+            transform.LookAt(pc.transform.position - v);
+            v = transform.position - pc.transform.position;
             v.x = v.z = 0;
-            other.transform.LookAt(transform.position - v);
+            pc.transform.LookAt(transform.position - v);
             StartCoroutine(SoulMateAnim());
         }
     }
@@ -134,7 +146,14 @@ public class SoulMate : MonoBehaviour
             }
             yield return new WaitForEndOfFrame();
         }
-        yield return new WaitForSecondsRealtime(1.5f);
+        image.color = new Color(0, 0, 0, 0);
+        image.gameObject.SetActive(true);
+        for (float i = 0; i < 1.2f; i += 0.01f)
+        {
+            yield return new WaitForSecondsRealtime(0.01f);// fade 속도 
+            image.color = new Color(0, 0, 0, i);
+        }
+        image.gameObject.SetActive(false);
         SceneManager.LoadScene(1);
     }
 }

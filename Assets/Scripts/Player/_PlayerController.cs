@@ -325,7 +325,41 @@ public class _PlayerController : MonoBehaviour
         }
         if (isTrigger)
         {
-            if (_npc != null && _npc.isTalk)
+            if (isBar)
+            {
+                if (OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick).x > 0.25f)
+                {
+                    tooltipTransfrom.transform.LookAt(Camera.main.transform);
+                    BarToolTip();
+                }
+                else if (OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick).x < -0.25f)
+                {
+                    tooltipTransfrom.transform.LookAt(Camera.main.transform);
+                    BarToolTip();
+                }
+                else if (OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).x > 0.25f)
+                {
+                    tooltipTransfrom.transform.LookAt(Camera.main.transform);
+                    BarToolTip();
+                }
+                else if (OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick).x < -0.25f)
+                {
+                    tooltipTransfrom.transform.LookAt(Camera.main.transform);
+                    BarToolTip();
+                }
+                if (OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) != 0 || OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) != 0)
+                {
+                    tooltipImage.gameObject.SetActive(false);
+                    isBar = false;
+                    isTrigger = false;
+                    if (BarToolTipIdx == 0)
+                    {
+                        ChinemachineManager.instance.StartChinema(2);
+
+                    }
+                }
+            }
+            else if (_npc != null && _npc.isTalk)
             {
 
                 if ((OVRInput.Get(OVRInput.Axis1D.PrimaryIndexTrigger) != 0 || OVRInput.Get(OVRInput.Axis1D.SecondaryIndexTrigger) != 0) && !isOpenEmotion)
@@ -611,10 +645,10 @@ public class _PlayerController : MonoBehaviour
     {
         if (!isAlcohol)
         {
-            tooltipImage.gameObject.SetActive(true);
             tooltipTransfrom.transform.LookAt(Camera.main.transform);
             BarToolTipIdx = 0;
             BarToolTip();
+            tooltipImage.gameObject.SetActive(true);
             isTrigger = true;
             isBar = true;
             beforeAlcoholPosition = this.transform.position;

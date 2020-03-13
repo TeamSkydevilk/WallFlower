@@ -9,6 +9,7 @@ public class SoulMateManager : MonoBehaviour
     public GameObject[] models2;
     public Material[] materials;
     public GameObject soulMate;
+    public int idx;
     private void Awake()
     {
         GameManager.OnGameStart += GameManager_OnGameStart;
@@ -20,7 +21,7 @@ public class SoulMateManager : MonoBehaviour
     }
     private void GameManager_OnGameStart()
     {
-        int idx = Random.Range(0, positions.Length);
+       // int idx = Random.Range(0, positions.Length);
         souldondes.instance.soulNPCIndex = Random.Range(0, models.Length);
         for (int i = 0; i < models.Length; ++i)
         {
@@ -36,5 +37,6 @@ public class SoulMateManager : MonoBehaviour
         models[souldondes.instance.soulNPCIndex].GetComponent<SkinnedMeshRenderer>().materials = temp;
         models2[souldondes.instance.soulNPCIndex].GetComponent<SkinnedMeshRenderer>().materials = temp2;
         soulMate.transform.position = positions[idx].position;
+        soulMate.transform.rotation = positions[idx].rotation;
     }
 }
